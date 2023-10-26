@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선물</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="start">
+        <label for="modal" class="openBtn">Open</label>
+    </div>
+    
+    <input type="checkbox" id="modal">
+    
+        <div class="modalBox">
+            <label for="modal" class="closeBtn">Close</label>
+            <ul>
+                <h2>다섯글자요</h2>
+                <h2>다섯글자요</h2>
+                <h2>다섯글자요</h2>
+                <h2>다섯글자요</h2>
+                <h2>다섯글자요</h2>
+            </ul>
+        </div>
+
+
+    <style>
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    width: 350px;
+    height: 400px;
+    background-color: aliceblue;
+}
+
+input[id="modal"] {
+    display: none;
+}
+
+.openBtn{
+    background-color: pink;
+    border: 3px #000 solid;
+    border-radius: 90px;
+    padding: 20px;
+    display: block; /*width height 값 주려고 먹임*/
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-weight: 900;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+.modalBox{
+    width: 280px;
+    height: 270px;
+    background-color: yellow;
+    border: 3px #000 solid;
+    border-radius: 10px;
+    position: relative;
+    visibility: hidden;
+}
+
+.closeBtn{
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    color: aliceblue;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-left: 3px #000 solid;
+    border-bottom: 3px #000 solid;
+}
+
+h2{
+    text-align: center;
+    margin-right: 60px;
+}
+
+/* 모달 윈도우가 팝업되는 코어 소스 */
+input#modal[type=checkbox]:checked~.modalBox {
+    visibility: visible;
+}
+
+    </style>    
+</body>
+</html>
